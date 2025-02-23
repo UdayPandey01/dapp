@@ -1,7 +1,6 @@
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import { useState } from "react";
 import { LAMPORTS_PER_SOL } from "@solana/web3.js";
-// import "./index.css"
 
 const Airdrop = () => {
     const wallet = useWallet();
@@ -47,18 +46,18 @@ const Airdrop = () => {
     }
 
     return (
-        <div className="flex flex-col items-center justify-center mt-10 p-6 bg-gray-900 text-white rounded-lg shadow-lg w-96">
-            <h2 className="text-2xl font-semibold mb-4">Solana Airdrop</h2>
+        <div className="flex flex-col items-center justify-center bg-[#0D0D0D] text-white p-8 rounded-lg shadow-lg w-96">
+            <h2 className="text-3xl font-bold mb-6 text-gray-200">💸 Solana Airdrop</h2>
             <input
                 type="text"
-                placeholder="Enter amount"
+                placeholder="Enter amount (SOL)"
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
-                className="w-full px-4 py-2 mb-4 border border-gray-600 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-3 mb-4 border border-gray-700 bg-[#1A1A1A] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 placeholder-gray-500"
             />
             <button
                 onClick={requestAirdrop}
-                className="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 transition-all text-white font-bold rounded-md shadow-md"
+                className="w-full py-3 px-6 bg-[#00ADB5] hover:bg-[#008B94] transition-all text-white font-bold rounded-md shadow-md"
             >
                 Send Airdrop
             </button>

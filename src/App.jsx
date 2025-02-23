@@ -9,16 +9,17 @@ import {
 } from "@solana/wallet-adapter-react-ui";
 import "@solana/wallet-adapter-react-ui/styles.css";
 import Airdrop from "./Airdrop";
-// import "./"
 
 function App() {
   return (
-    <ConnectionProvider endpoint="https://solana-devnet.g.alchemy.com/v2/WyU-CNJMuyp-6lP3XwbM_lJU6MGBQpoA">
+    <ConnectionProvider endpoint="https://api.devnet.solana.com">
       <WalletProvider wallets={[]} autoConnect>
         <WalletModalProvider>
-          <div className="flex flex-col items-center justify-center h-screen bg-gray-950 text-white">
-            <WalletMultiButton className="mb-4" />
-            <WalletDisconnectButton className="mb-4" />
+          <div className="flex flex-col items-center justify-center h-screen bg-black text-white">
+            <div className="flex space-x-4 mb-6">
+              <WalletMultiButton className="bg-[#10B981] hover:bg-[#0E9D74] px-6 py-2 rounded-lg shadow-md" />
+              <WalletDisconnectButton className="bg-[#EF4444] hover:bg-[#D63031] px-6 py-2 rounded-lg shadow-md" />
+            </div>
             <Airdrop />
           </div>
         </WalletModalProvider>
