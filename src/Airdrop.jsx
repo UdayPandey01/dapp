@@ -46,10 +46,12 @@ const Airdrop = () => {
     }
 
     return (
-        <div className="flex flex-col items-center justify-center bg-[#0D0D0D] text-white p-8 rounded-lg shadow-lg w-96">
-            <h2 className="text-3xl font-bold mb-6 text-gray-200">💸 Solana Airdrop</h2>
+        <div className="flex flex-col items-center justify-center bg-[#0D0D0D] text-white p-6 sm:p-8 rounded-lg shadow-lg w-full max-w-md mx-auto">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-200 text-center">
+                💸 Solana Airdrop
+            </h2>
             <input
-                type="text"
+                type="number"
                 placeholder="Enter amount (SOL)"
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
